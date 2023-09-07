@@ -1,7 +1,6 @@
 # ChorumeMock
 
-
-<image src="img.png" style="text-align: center"></image>
+<div style="display:block; text-align: center"><img src="img.png" width="200" height="200" /></div>
 
 ## How-to guides
 
