@@ -1,16 +1,20 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"github.com/mcruzdev/chorume-mock/cmd/generator"
+	"github.com/mcruzdev/chorume-mock/internal/model"
+	"github.com/mcruzdev/chorume-mock/internal/oapiwrapper"
 	"os"
 
 	"github.com/spf13/cobra"
 )
 
-
 var (
 	openApiFile string
 )
+
 func main() {
 	if err := CreateRootCmd().Execute(); err != nil {
 		_, _ = fmt.Fprintln(os.Stderr, err)
@@ -21,7 +25,7 @@ func main() {
 func CreateRootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
 		Use:   "chorume-mock",
-		Short: "Generate a Wiremock definition from OpenAPI specification",
+		Short: "GenerateStubRules a Wiremock definition from OpenAPI specification",
 	}
 
 	rootCmd.AddCommand(CreateGenerateCmd())
@@ -34,16 +38,25 @@ func CreateGenerateCmd() *cobra.Command {
 	cmd := cobra.Command{
 		Use:     "generate",
 		Aliases: []string{"s"},
-		Short: "Generate the Wiremock definition from OpenAPI specification file",
+		Short:   "GenerateStubRules the Wiremock definition from OpenAPI specification file",
 		Run: func(cmd *cobra.Command, args []string) {
-			file, err := os.ReadFile(openApiFile)
+			openapi3 := oapiwrapper.Get(openApiFile)
+			stubRules := generator.GenerateStubRules(openapi3)
+			mappings := model.NewT(stubRules)
+			marshal, err := json.Marshal(mappings)
 			if err != nil {
 				panic(any(err))
 			}
 
-			content := string(file)
+			err = os.Mkdir("mappings", 0777)
+			if err != nil && os.IsNotExist(err) {
+				panic(any(err))
+			}
 
-			fmt.Println(content)
+			err = os.WriteFile("mappings/wiremock-mappings.json", marshal, 0644)
+			if err != nil {
+				panic(any(err))
+			}
 		},
 	}
 
