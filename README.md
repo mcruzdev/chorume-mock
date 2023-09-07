@@ -1,6 +1,8 @@
 # ChorumeMock
 
-<div style="display:block; text-align: center"><img src="img.png" width="200" height="200" /></div>
+<p align="center">
+  <img src="img.png" width="200" height="200" style="display: block; margin: 0 auto;" />
+</p>
 
 ## How-to guides
 
