@@ -1,0 +1,3 @@
+package oapiwrapper
+
+func init() {}
