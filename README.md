@@ -2,7 +2,7 @@
 
 ChorumeMock converts [OpenAPI Specification V3](https://swagger.io/specification/) to Wiremock [Bulk Stubs](https://wiremock.org/docs/stubbing/#bulk-importing-stubs).
 
-> **NOTE** Project status: `development`
+> ⚠️ **NOTE** Project status: `development`
 
 <p align="center">
   <img src="img.png" width="200" height="200" style="display: block; margin: 0 auto;" />
