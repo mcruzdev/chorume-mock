@@ -36,8 +36,14 @@ func CreateGenerateCmd() *cobra.Command {
 		Aliases: []string{"s"},
 		Short: "Generate the Wiremock definition from OpenAPI specification file",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Println("[generate]")
-			fmt.Println(fmt.Sprintf("file: %s", openApiFile))
+			file, err := os.ReadFile(openApiFile)
+			if err != nil {
+				panic(any(err))
+			}
+
+			content := string(file)
+
+			fmt.Println(content)
 		},
 	}
 

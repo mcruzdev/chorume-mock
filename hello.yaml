@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: ChorumeMock
+  description: ChorumeMock
+  version: 1.0.0
+servers:
+  - url: 'https://chorume-mock.com'
+paths:
+  /ping:
+    get:
+      responses:
+        200:
+          description: Ping endpoint
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
