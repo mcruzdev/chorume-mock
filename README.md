@@ -1,6 +1,7 @@
 # ChorumeMock
 
 
+<image src="img.png" style="text-align: center"></image>
 
 ## How-to guides
 
