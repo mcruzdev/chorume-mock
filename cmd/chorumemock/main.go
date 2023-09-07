@@ -24,8 +24,8 @@ func main() {
 
 func CreateRootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   "chorume-mock",
-		Short: "GenerateStubRules a Wiremock definition from OpenAPI specification",
+		Use:   "chorumemock",
+		Short: "Generate Wiremock StubRules from OpenAPI specification",
 	}
 
 	rootCmd.AddCommand(CreateGenerateCmd())
@@ -61,7 +61,7 @@ func CreateGenerateCmd() *cobra.Command {
 	}
 
 	cmd.PersistentFlags().StringVar(&openApiFile, "oapi", "", `The OpenAPI specification file.
-Usage: chorume-mock generate --oapi=my-openapi-spec.yaml`)
+Usage: chorumemock generate --oapi=my-openapi-spec.yaml`)
 
 	return &cmd
 }

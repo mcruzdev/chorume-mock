@@ -1,15 +1,37 @@
 # ChorumeMock
 
+ChorumeMock converts [OpenAPI Specification V3](https://swagger.io/specification/) to Wiremock [Bulk Stubs](https://wiremock.org/docs/stubbing/#bulk-importing-stubs).
+
+> **NOTE** Project status: `development`
+
 <p align="center">
   <img src="img.png" width="200" height="200" style="display: block; margin: 0 auto;" />
 </p>
+
+
+## Getting Started
+
+### Installing
+
+Clone this repo:
+
+```shell
+git clone git@github.com:mcruzdev/chorume-mock.git
+```
+
+Build the `chorume-cli` project:
+
+```shell
+go build 
+```
+
 
 ## How-to guides
 
 ### How-to generate a Wiremock definition from OpenAPI specification
 
 ```
-chorume-mock generate -oapi=openapi.yaml
+chorumemock generate -oapi=openapi.yaml
 ```
 
 After, you can execute the wiremock using docker:
