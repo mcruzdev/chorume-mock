@@ -1,6 +1,6 @@
-# ChorumeMock
+# Speckify
 
-ChorumeMock converts [OpenAPI Specification V3](https://swagger.io/specification/) to Wiremock [Bulk Stubs](https://wiremock.org/docs/stubbing/#bulk-importing-stubs).
+Speckify converts [OpenAPI Specification V3](https://swagger.io/specification/) to Wiremock [Bulk Stubs](https://wiremock.org/docs/stubbing/#bulk-importing-stubs).
 
 > ⚠️ **NOTE** Project status: `development`
 
@@ -16,10 +16,10 @@ ChorumeMock converts [OpenAPI Specification V3](https://swagger.io/specification
 Clone this repo:
 
 ```shell
-git clone git@github.com:mcruzdev/chorume-mock.git
+git clone git@github.com:mcruzdev/speckify.git
 ```
 
-Build the `chorume-cli` project:
+Build the `speckify-cli` project:
 
 ```shell
 go build 

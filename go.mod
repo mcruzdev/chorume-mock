@@ -1,4 +1,4 @@
-module github.com/mcruzdev/chorume-mock
+module github.com/mcruzdev/speckify
 
 go 1.20
 

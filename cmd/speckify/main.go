@@ -3,10 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/mcruzdev/chorume-mock/cmd/generator"
-	"github.com/mcruzdev/chorume-mock/internal/model"
-	"github.com/mcruzdev/chorume-mock/internal/oapiwrapper"
 	"os"
+
+	"github.com/mcruzdev/speckify/cmd/generator"
+	"github.com/mcruzdev/speckify/internal/model"
+	"github.com/mcruzdev/speckify/internal/oapiwrapper"
 
 	"github.com/spf13/cobra"
 )
@@ -24,7 +25,7 @@ func main() {
 
 func CreateRootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   "chorumemock",
+		Use:   "speckify",
 		Short: "Generate Wiremock StubRules from OpenAPI specification",
 	}
 

@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
-  title: ChorumeMock
-  description: ChorumeMock
+  title: Speckify
+  description: Speckify
   version: 1.0.0
 servers:
-  - url: 'https://chorume-mock.com'
+  - url: 'https://speckify.com'
 paths:
   /ping:
     get:
