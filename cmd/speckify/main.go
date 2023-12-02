@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mcruzdev/speckify/cmd/generator"
+	"github.com/mcruzdev/speckify/internal/generator"
 	"github.com/mcruzdev/speckify/internal/model"
 	"github.com/mcruzdev/speckify/internal/oapiwrapper"
 

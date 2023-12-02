@@ -22,16 +22,15 @@ git clone git@github.com:mcruzdev/speckify.git
 Build the `speckify-cli` project:
 
 ```shell
-go build 
+go build -o speckify cmd/speckify/main.go
 ```
-
 
 ## How-to guides
 
 ### How-to generate a Wiremock definition from OpenAPI specification
 
 ```
-chorumemock generate -oapi=openapi.yaml
+./speckify generate --oapi=openapi.yaml
 ```
 
 After, you can execute the wiremock using docker:
