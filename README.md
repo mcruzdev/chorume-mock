@@ -4,11 +4,6 @@ Speckify converts [OpenAPI Specification V3](https://swagger.io/specification/) 
 
 > ⚠️ **NOTE** Project status: `development`
 
-<p align="center">
-  <img src="img.png" width="200" height="200" style="display: block; margin: 0 auto;" />
-</p>
-
-
 ## Getting Started
 
 ### Installing
@@ -19,7 +14,7 @@ Clone this repo:
 git clone git@github.com:mcruzdev/speckify.git
 ```
 
-Build the `speckify-cli` project:
+Build the `speckify` project:
 
 ```shell
 go build -o speckify cmd/speckify/main.go
@@ -66,8 +61,6 @@ Sec-Fetch-User: [?1]
 Sec-Fetch-Dest: [document]
 Accept-Encoding: [gzip, deflate, br]
 Accept-Language: [pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7]
-
-
 
 Matched response definition:
 {

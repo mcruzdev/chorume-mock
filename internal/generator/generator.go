@@ -68,6 +68,7 @@ func generateStubGet(path string, op *openapi3.Operation) *wiremock.StubRule {
 		case string:
 			r = r.WithBody(fmt.Sprintf("%v", t))
 		}
+
 	}
 
 	return sr.WillReturnResponse(r)
